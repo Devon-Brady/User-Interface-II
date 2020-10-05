@@ -49,16 +49,21 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 
-
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
 
 body{
-    background-image: url(https://background-tiles.com/overview/blue/textures/large/5023.png);
+    
     font-family: 'Permanent Marker', cursive;
-    width: 1024px;
+    width: 100%;
     margin:0 auto;
-    font-size: 16px;
     border: 10px solid black;
-
+    
+    
+    
 }
 a{
     border: 2px solid black;
@@ -68,31 +73,32 @@ a{
 
 
 .header{
-    height: 100px;
-    padding: 24px;
+
    background-color:#adc4dd;
     border-bottom: 10px solid black;
 }
 h1{
-    font-size: 40px;
+    font-size: 3rem;
     letter-spacing: 2px;
     text-decoration: line;
+    margin-left: 5%;;
 }
 .header .navbar{
-    /* border: 1px solid black; */
+    
     display: flex;
     justify-content: left;
-    margin: 15px;
+    margin: 1%;
     
     
 }
 .navBarLink{
     text-decoration: none;
-    padding: 10px;
+    padding: 1%;
     background-color:  lightgrey;
-    margin: 10px;
+    margin: 2%;
     color: black;
     transition:0.3s;
+    font-size: 1.2rem;
 }
 .navBarLink:hover{
     background-color: black;
@@ -104,96 +110,99 @@ img{
 }
 .content{
     background-color: #778899;
-    height: 830px;
+    /* height:80%;
+     */
+}
+
+.topContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 2%; 
+    flex-direction: row;
     
 }
 .topImg{
-     width: 30%;
-     padding: 19px;
-    
-}
-.mainImg{
-    width: 310px;
-}
-.topContent{
-    display:flex;
-    flex-direction: row;
-    height: 350px;
-   
+    width: 50%;
+    margin: 5%;
+    background-image: url('https://picsum.photos/200/?random=1');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    /* border: 1px solid black; */
 }
 .txtContent{
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: space-evenly;
-width: 70%;
-margin-left: 70px;
-margin-bottom: 75px;
+width: 50%;
+margin-left: 7%;
+margin-bottom: 6%;
+padding: 5% 0;
+height: 20%;
 
 }
 h2{
-    font-size: 30px;
+    font-size: 2rem;
     color: lightgrey;
     text-shadow: 2px 2px black;
-    margin-top: 75px;
+    margin-top: 15%;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
 }
 .projectLink{
     background-color: lightgrey;
-    width: 150px;
+    width: 25%;
     text-align: center;
     text-decoration: none;
-    padding:10px;
-    margin-bottom: 20px;
+    padding:2%;
+    margin-bottom: 5%;
     color:black;
     transition:0.3s;
+    font-size: 1rem;;
 }
 
 .info{
-    width: 400px;
+    margin-right: 20%;
     background-color: lightgrey;
-    padding:10px;
+    padding:3%;
     border: 3px solid black;
-    font-size: 18px;
+    font-size: 1.2rem;
+    
 }
-.gallery{
+.gallery, .galleryB{
+    
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    margin-bottom: 20px;
-}
-.galleryB{
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.gallery,.galleryB p{
+    padding-bottom: 3%;
     color:lightgrey;
     text-shadow: 1px 1px black;
 }
+
 .footer{
-    height: 150px;
+    
     background-color: #778899;
-    padding: 6px;
+    
     text-align: center;
     
 }
 h3{
-    font-size: 40px;
-    margin-bottom: 24px;
+    font-size: 2rem;
+    margin-bottom: 2%;
 }
 button{
     border: 2px solid black;
     border-radius: 20px;
     color:black;
     background-color: lightgrey;
-    width: 150px;
+    width: 20%;
     text-align: center;
     text-decoration: none;
-    padding:10px;
-    margin-bottom: 20px;
+    padding:1%;
+    margin-bottom: 2%;
     font-family: 'Permanent Marker', cursive;
     transition:0.3s;
 }
@@ -207,3 +216,75 @@ button:hover{
 }
 
 
+@media(max-width: 800px) {
+.info, .projectLink{
+    font-size: .8rem;
+}
+
+}
+@media(max-width: 500px){
+    .header .navbar{
+        display: flex;
+        justify-content: center;
+        margin: 1%;
+        flex-direction: column;
+        align-items: center;
+}
+h1{
+    text-align: center;
+}
+.topContent{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    margin-bottom: 2%; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+.txtContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    padding: 0%;
+    
+    
+    }
+    p.info{
+        margin: auto;
+    }
+    .projectLink{
+        background-color: lightgrey;
+        width: 50%;
+        text-align: center;
+        text-decoration: none;
+        padding:2%;
+        margin-bottom: 5%;
+        color:black;
+        transition:0.3s;
+        font-size: 1rem;;
+    }
+    .topImg{
+        height: 250px;
+        margin:0%;
+    }
+    H2{
+        margin-top: 0%;
+    }
+    .gallery, .galleryB{
+    
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        padding-bottom: 3%;
+        color:lightgrey;
+        text-shadow: 1px 1px black;
+        flex-wrap: wrap;
+    }
+}
+
+    
